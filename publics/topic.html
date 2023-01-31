@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <title>TEST</title>
+    <link rel="stylesheet" href="./css/components/button.css">
+    <link rel="stylesheet" href="./css/components/header.css">
+    <link rel="stylesheet" href="./css/components/footer.css">
+    <link rel="stylesheet" href="./css/pages/topic-page.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="./images/logo.png" alt="logo" class="logo">
+        <div class="header-title">SMART CONTROL SYSTEM</div>
+    </div>
+    <div class="topics-container">
+        <!-- content -->
+
+        <h2>Biệt thự Đà Lạt</h2>
+        <div class="warning">
+            Không có dữ liệu để hiển thị!
+        </div>
+        <div class="temp-humid">
+            <style>
+                .warning{
+                    position: absolute;
+                    width: 100%;
+                    height: 200px;
+                    background-color: rgba(0, 0, 0, 0.562);
+                    color: #fff;
+                    font-size: 200%;
+                    top: 290px;
+                    z-index: 100;
+                    text-align: center;
+                    line-height: 200px;
+                }
+            </style>
+            <div class="charts">
+                <div class="chart-temp" id="temp"></div>
+                <div class="chart-humid" id="humid"></div>
+            </div>
+            <div class="current-data">
+                <div class="temp-data">
+                    <i class="fas fa-thermometer-three-quarters"></i>
+                    Nhiệt độ: <span id="humid">27.08</span> °C
+                </div>
+                <div class="humid-data">
+                    <i class="fas fa-tint"></i>
+                    Độ ẩm: <span id="humid">80.99</span> %
+                </div>
+            </div>
+        </div>
+
+        <div class="devices">
+            <style>
+                .loading{
+                    width: 100%;
+                    height: 480px;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    background-color: rgba(0, 0, 0, 0.459);
+                    transform: translate(0, 264px);
+                }
+                #loader {
+                    border: 8px solid #f3f3f3;
+                    border-radius: 50%;
+                    border-top: 8px solid #d83e10;
+                    width: 50px;
+                    height: 50px;
+                    -webkit-animation: spin 2s linear infinite;
+                    /* Safari */
+                    animation: spin 2s linear infinite;
+                }
+
+                /* Safari */
+                @-webkit-keyframes spin {
+                    0% {
+                        -webkit-transform: rotate(0deg);
+                    }
+
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes spin {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+            </style>
+            <div class="device active">
+                <div class="status"></div>
+                <div class="device-name">Đèn phòng khách</div>
+                <div class="status-text">ON</div>
+                <label class="switch">
+                    <input type="checkbox" checked onclick="toggleStatus(this)">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="device">
+                <div class="status"></div>
+                <div class="device-name">Đèn phòng ngủ</div>
+                <div class="status-text">OFF</div>
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleStatus(this)">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="device active">
+                <div class="status"></div>
+                <div class="device-name">Đèn phòng ăn</div>
+                <div class="status-text">ON</div>
+                <label class="switch">
+                    <input type="checkbox" checked onclick="toggleStatus(this)">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="device">
+                <div class="status"></div>
+                <div class="device-name">Đèn phòng tắm</div>
+                <div class="status-text">OFF</div>
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleStatus(this)">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="loading">
+            <div id="loader"></div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="logo">
+            <img src="./images/logo.png" alt="logo">
+        </div>
+        <div class="footer-content">
+            <h2>Nhóm X - IT4735</h2>
+            <p>Nguyễn Ngọc Hưng - 2018xxxx</p>
+            <p>Nguyễn Tiến Anh - 2018xxxx</p>
+        </div>
+    </div>
+    <script src="./js/topic.js"></script>
+</body>
+
+</html>

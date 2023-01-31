@@ -1,0 +1,12 @@
+
+body.dark .login-form h2 {
+    background-color: #18191A;
+}
+
+body.dark .login-form .form-input .lbl {
+    background-color: #18191A;
+}
+
+body.dark .login-form .form-input input {
+    background-color: #18191A;
+}

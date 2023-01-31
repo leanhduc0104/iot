@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('../partials/head', {title: 'SCS - Login'}); -%>
+        <link rel="stylesheet" href="/css/components/header.css">
+        <link rel="stylesheet" href="/css/components/footer.css">
+        <link rel="stylesheet" href="/css/components/button.css">
+        <link rel="stylesheet" href="/css/pages/login-page.css">
+        <link rel="stylesheet" href="/css/dark-theme.css">
+        <link rel="stylesheet" href="/css/pages/login-page-dark.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="/js/login.js"></script>
+
+    </head>
+    <body>
+        <%- include('../components/header', {isHideLoginBtn: true, isLoggin: false, name: null}) -%>
+        <!-- form -->
+        <div class="login-form-container">
+            <form class="login-form">
+                <h2>SMART CONTROL</h2>
+                <div class="form-input email">
+                    <input type="text" id="email" tabindex="1" value="test@gmail.com" onblur="checkRequired('email', 'email')">
+                    <div class="lbl urs-label">Email</div>
+                </div>
+                <div class="form-input password">
+                    <input type="password" id="password" tabindex="2" value="123" onblur="checkRequired('password', 'mật khẩu')">
+                    <div class="lbl urs-label">Mật khẩu</div>
+                </div>
+                <p class="err-msg"></p>
+                <div class="btn btn-form-submit" tabindex="3" onclick="login()">ĐĂNG NHẬP</div>
+            </form>
+        </div>
+        <%- include('../components/footer') -%>
+        <script src="/js/dark-theme.js"></script>
+    </body>
+    
+</html>

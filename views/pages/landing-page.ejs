@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('../partials/head', {title : null}); -%>
+        <link rel="stylesheet" href="/css/components/header.css">
+        <link rel="stylesheet" href="/css/components/footer.css">
+        <link rel="stylesheet" href="/css/components/button.css">
+        <link rel="stylesheet" href="/css/pages/landing-page.css">
+        <link rel="stylesheet" href="/css/dark-theme.css">
+    </head>
+    <body>
+        <%- include('../components/header', {isHideLoginBtn: false, isLoggin: isLoggin, name: name}) -%>
+        <div class="cover">
+            <div class="cover-title-1">ỨNG DỤNG ĐIỀU KHIỂN THIẾT BỊ</div>
+            <div class="cover-title-2">VÀ GIÁM SÁT NHIỆT ĐỘ, ĐỘ ẨM MÔI TRƯỜNG</div>
+            <div class="cover-title-3">SMART CONTROL</div>
+            <% if(isLoggin) { %>
+                <a href="/dashboard" class="btn btn-dashboard">Tới trang điều khiển</a>
+            <% } %>
+        </div>
+        <%- include('../components/footer') -%>
+        <script src="/js/dark-theme.js"></script>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+body {
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: url('../../images/bg15.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -60px;
+}
+
+.cover>* {
+    color: #fff;
+    position: absolute;
+    right: 35px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.cover .cover-title-1 {
+    font-size: 50px;
+    top: 135px;
+}
+
+.cover .cover-title-2 {
+    font-size: 35px;
+    top: 215px;
+}
+
+.cover-title-3 {
+    font-size: 55px;
+    top: 280px;
+}
+
+@media only screen and (max-width: 900px) {
+    .cover-title-1 {
+        font-size: 30px !important;
+        text-align: right;
+        top: auto !important;
+        bottom: 177px;
+    }
+    .cover-title-2 {
+        text-align: right;
+        font-size: 21px !important;
+        top: auto !important;
+        bottom: 110px !important;
+        padding-left: 19px;
+    }
+    .cover-title-3 {
+        top: 137px;
+        text-align: right;
+        line-height: 80px;
+    }
+    .btn-dashboard {
+        top: auto !important;
+        bottom: 30px;
+    }
+    .cover{
+        background-position-y: 0px;
+        background-position-x: -60px;
+    }
+}
